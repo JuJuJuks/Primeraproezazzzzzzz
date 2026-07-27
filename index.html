@@ -1,0 +1,1245 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Las Frutas de Vicente | Paltas y Frutillas Premium</title>
+    
+    <!-- SEO y Metadatos -->
+    <meta name="description" content="Fruta premium de Melipilla: Paltas Hass, Frutillas, Cerezas y más. Pedidos por WhatsApp, despacho a domicilio 24/7." />
+    <meta name="keywords" content="frutas, paltas, frutillas, cerezas, Melipilla, fruta premium, venta de fruta" />
+    <meta property="og:title" content="Las Frutas de Vicente | Paltas y Frutillas Premium" />
+    <meta property="og:description" content="Fruta premium de Melipilla. Paltas Hass, Frutillas, Cerezas y más." />
+    <meta property="og:url" content="https://tusitio.com" />
+    <meta name="robots" content="index, follow" />
+    
+    <!-- Fuentes e Iconos -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+       <!-- ===== NAVBAR ===== -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <!-- Logo -->
+        <a href="#" class="nav-logo">
+          <span class="logo-icon">🍓</span>
+          <span class="logo-text">Las Frutas de <strong>Vicente</strong></span>
+        </a>
+
+        <!-- Botón Menú Hamburguesa (Ícono) -->
+        <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- Menú Desplegable -->
+        <div class="nav-dropdown" id="navDropdown">
+          <div class="nav-dropdown-content">
+            <!-- Usuario logueado -->
+            <div class="nav-item user-greeting" id="userGreeting" style="display: none;">
+              <span class="user-greeting-text" id="greetingText">
+                <i class="fas fa-user-circle"></i> Hola, <span id="userNameDisplay">Usuario</span>
+              </span>
+            </div>
+            
+            <a href="#productos" class="nav-link">
+              <i class="fas fa-box"></i> Productos
+            </a>
+            
+            <a href="#" class="nav-link" id="perfilBtn">
+              <i class="fas fa-user-circle"></i> <span id="perfilText">Mi Cuenta</span>
+            </a>
+            
+            <a href="#" class="nav-link" id="historialBtn">
+              <i class="fas fa-clock-rotate-left"></i> Historial
+            </a>
+            
+            <a href="#contacto" class="nav-link">
+              <i class="fas fa-whatsapp"></i> Contacto
+            </a>
+            
+            <a href="#" class="nav-link" id="logoutBtn" style="display: none;">
+              <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
+            </a>
+            
+            <a href="https://wa.me/56922289073" target="_blank" class="nav-link-cta">
+              <i class="fas fa-shopping-cart"></i> Pedir Ahora
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HEADER HERO -->
+    <header class="hero">
+      <span class="badge">
+        <i class="fas fa-gem"></i> Calidad de Exportación • Directo del Productor
+      </span>
+      <h1>Paltas y Frutillas de Selección</h1>
+      <p>
+        Enviamos a tu mesa solo lo mejor de la cosecha. Descubre el sabor
+        auténtico de la fruta premium, seleccionada a mano para garantizar
+        frescura y dulzura inigualables.
+      </p>
+      <div class="hero-stats">
+        <span><i class="fas fa-truck"></i> Despacho 24/7</span>
+        <span><i class="fas fa-leaf"></i> 100% Natural</span>
+        <span><i class="fas fa-star"></i> Calidad Premium</span>
+      </div>
+    </header>
+
+    <!-- PRODUCTOS -->
+    <main class="container" id="productos">
+      <!-- Tarjeta Frutillas -->
+      <article class="card" data-nombre="frutilla" data-categoria="berries" data-producto-id="frutilla">
+        <div class="card-header header-frutilla">
+          <img src="frutilla.png" alt="Frutillas Premium seleccionadas" loading="lazy" />
+          <span class="card-tag">⭐ Más Vendido</span>
+        </div>
+        <div class="card-body">
+          <div>
+            <h2 class="card-title">Frutilla Selección Premium 🍓</h2>
+            <p class="card-desc">
+              Disfruta del verdadero sabor de la fruta recién cosechada.
+              Nuestras frutillas destacan por su calibre superior, color carmesí
+              vibrante y una dulzura natural equilibrada.
+            </p>
+            <div class="stock-indicator">
+              <span class="stock-dot verde"></span>
+              <span class="stock-text">¡Disponible! Fresco del día</span>
+            </div>
+            <ul class="features">
+              <li><i class="fas fa-check-circle"></i> Cosecha del día: frescura garantizada.</li>
+              <li><i class="fas fa-check-circle"></i> Textura firme y jugosa, sin imperfecciones.</li>
+              <li><i class="fas fa-check-circle"></i> Sabor intenso, ideal para paladares exigentes.</li>
+            </ul>
+          </div>
+          <div>
+            <div class="selector-tipo">
+              <label for="tipo-frutilla">
+                <i class="fas fa-box"></i> Tipo de Caja:
+              </label>
+              <select id="tipo-frutilla" class="tipo-select" data-producto="frutilla">
+                <option value="chica" data-precio="2000">Caja Chica - $2.000</option>
+                <option value="grande" data-precio="10000">Caja Grande - $10.000</option>
+              </select>
+            </div>
+            <div class="selector-cantidad">
+              <label for="cantidad-frutilla">
+                <i class="fas fa-hashtag"></i> Cantidad:
+              </label>
+              <select id="cantidad-frutilla" class="cantidad-select" data-producto="frutilla">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10+</option>
+              </select>
+            </div>
+            <div class="precio-total-wrapper">
+              <span class="precio-total-label">Total:</span>
+              <span class="precio-total" id="total-frutilla">$2.000</span>
+            </div>
+            <a
+              href="#"
+              class="btn-wa btn-comprar"
+              data-producto="frutilla"
+              data-nombre="Frutillas 🍓"
+              id="btn-frutilla"
+            >
+              <i class="fab fa-whatsapp"></i> Reservar Pedido
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Tarjeta Cerezas -->
+      <article class="card" data-nombre="cereza" data-categoria="berries" data-producto-id="cereza">
+        <div class="card-header header-cereza">
+          <img src="cereza.jpg" alt="Cerezas Premium seleccionadas" loading="lazy" />
+          <span class="card-tag">🍒 Temporada</span>
+        </div>
+        <div class="card-body">
+          <div>
+            <h2 class="card-title">Cerezas Selección Premium 🍒</h2>
+            <p class="card-desc">
+              Cerezas dulces y crujientes, recién cosechadas. De color rojo intenso y sabor inigualable, perfectas para los paladares más exigentes. Cada cereza es seleccionada a mano.
+            </p>
+            <div class="stock-indicator">
+              <span class="stock-dot verde"></span>
+              <span class="stock-text">¡Disponible! Fresco del día</span>
+            </div>
+            <ul class="features">
+              <li><i class="fas fa-check-circle"></i> Cosecha del día: máxima frescura.</li>
+              <li><i class="fas fa-check-circle"></i> Textura firme y crujiente.</li>
+              <li><i class="fas fa-check-circle"></i> Sabor dulce con un toque ácido equilibrado.</li>
+            </ul>
+          </div>
+          <div>
+            <div class="selector-tipo">
+              <label for="tipo-cereza">
+                <i class="fas fa-box"></i> Tipo de Caja:
+              </label>
+              <select id="tipo-cereza" class="tipo-select" data-producto="cereza">
+                <option value="chica" data-precio="3000">Caja Chica - $3.000</option>
+                <option value="grande" data-precio="12000">Caja Grande - $12.000</option>
+              </select>
+            </div>
+            <div class="selector-cantidad">
+              <label for="cantidad-cereza">
+                <i class="fas fa-hashtag"></i> Cantidad:
+              </label>
+              <select id="cantidad-cereza" class="cantidad-select" data-producto="cereza">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10+</option>
+              </select>
+            </div>
+            <div class="precio-total-wrapper">
+              <span class="precio-total-label">Total:</span>
+              <span class="precio-total" id="total-cereza">$3.000</span>
+            </div>
+            <a
+              href="#"
+              class="btn-wa btn-comprar"
+              data-producto="cereza"
+              data-nombre="Cerezas 🍒"
+              id="btn-cereza"
+            >
+              <i class="fab fa-whatsapp"></i> Reservar Pedido
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Tarjeta Paltas -->
+      <article class="card" data-nombre="palta" data-categoria="verdura" data-producto-id="palta">
+        <div class="card-header header-palta">
+          <img src="paltas.png" alt="Paltas Hass cremosas calidad extra" loading="lazy" />
+          <span class="card-tag">🥑 Estrella</span>
+        </div>
+        <div class="card-body">
+          <div>
+            <h2 class="card-title">Palta Hass Calidad Extra 🥑</h2>
+            <p class="card-desc">
+              La reina de la mesa. Ofrecemos palta Hass de primera calidad,
+              reconocida por su pulpa cremosa, alto contenido de aceites
+              saludables y ausencia total de fibras molestosas.
+            </p>
+            <div class="stock-indicator">
+              <span class="stock-dot verde"></span>
+              <span class="stock-text">¡Disponible! Fresco del día</span>
+            </div>
+            <ul class="features">
+              <li><i class="fas fa-check-circle"></i> Variedad 100% Hass Chilena.</li>
+              <li><i class="fas fa-check-circle"></i> Punto de madurez perfecto.</li>
+              <li><i class="fas fa-check-circle"></i> Textura suave y sabor delicado a nuez.</li>
+            </ul>
+          </div>
+          <div>
+            <div class="selector-tipo">
+              <label for="tipo-palta">
+                <i class="fas fa-box"></i> Tipo de Caja:
+              </label>
+              <select id="tipo-palta" class="tipo-select" data-producto="palta">
+                <option value="chica" data-precio="4000">1 Kilo - $4.000</option>
+                <option value="grande" data-precio="10000">3 Kilos - $10.000</option>
+              </select>
+            </div>
+            <div class="selector-cantidad">
+              <label for="cantidad-palta">
+                <i class="fas fa-hashtag"></i> Cantidad:
+              </label>
+              <select id="cantidad-palta" class="cantidad-select" data-producto="palta">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10+</option>
+              </select>
+            </div>
+            <div class="precio-total-wrapper">
+              <span class="precio-total-label">Total:</span>
+              <span class="precio-total" id="total-palta">$4.000</span>
+            </div>
+            <a
+              href="#"
+              class="btn-wa btn-comprar"
+              data-producto="palta"
+              data-nombre="Paltas 🥑"
+              id="btn-palta"
+            >
+              <i class="fab fa-whatsapp"></i> Reservar Pedido
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Tarjeta Naranjas -->
+      <article class="card" data-nombre="naranja" data-categoria="citricos" data-producto-id="naranja">
+        <div class="card-header header-naranja">
+          <img src="naranja.jpg" alt="Naranjas Premium seleccionadas" loading="lazy" />
+          <span class="card-tag">🍊 Dulce</span>
+        </div>
+        <div class="card-body">
+          <div>
+            <h2 class="card-title">Naranjas Dulces Premium 🍊</h2>
+            <p class="card-desc">
+              Naranjas recién cosechadas, dulces y jugosas. Perfectas para jugos naturales o para disfrutar al natural. Nuestra selección garantiza el mejor sabor y frescura.
+            </p>
+            <div class="stock-indicator">
+              <span class="stock-dot verde"></span>
+              <span class="stock-text">¡Disponible! Fresco del día</span>
+            </div>
+            <ul class="features">
+              <li><i class="fas fa-check-circle"></i> Ricas en vitamina C.</li>
+              <li><i class="fas fa-check-circle"></i> Textura jugosa y sin semillas.</li>
+              <li><i class="fas fa-check-circle"></i> Sabor dulce y equilibrado.</li>
+            </ul>
+          </div>
+          <div>
+            <div class="selector-tipo">
+              <label for="tipo-naranja">
+                <i class="fas fa-box"></i> Tipo de Caja:
+              </label>
+              <select id="tipo-naranja" class="tipo-select" data-producto="naranja">
+                <option value="chica" data-precio="5000">Caja 2kg - $5.000</option>
+                <option value="grande" data-precio="9000">Caja 4kg - $9.000</option>
+              </select>
+            </div>
+            <div class="selector-cantidad">
+              <label for="cantidad-naranja">
+                <i class="fas fa-hashtag"></i> Cantidad:
+              </label>
+              <select id="cantidad-naranja" class="cantidad-select" data-producto="naranja">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10+</option>
+              </select>
+            </div>
+            <div class="precio-total-wrapper">
+              <span class="precio-total-label">Total:</span>
+              <span class="precio-total" id="total-naranja">$5.000</span>
+            </div>
+            <a
+              href="#"
+              class="btn-wa btn-comprar"
+              data-producto="naranja"
+              data-nombre="Naranjas 🍊"
+              id="btn-naranja"
+            >
+              <i class="fab fa-whatsapp"></i> Reservar Pedido
+            </a>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <!-- ===== MODAL PERFIL / REGISTRO / LOGIN ===== -->
+    <div class="modal" id="perfilModal">
+      <div class="modal-content modal-perfil">
+        <div class="modal-header">
+          <h2><i class="fas fa-user-circle"></i> <span id="modalPerfilTitle">Mi Perfil</span></h2>
+          <button class="modal-close" id="perfilClose">&times;</button>
+        </div>
+        <div class="modal-body">
+          <!-- Perfil del usuario logueado -->
+          <div id="perfilLogueado" style="display: none;">
+            <div class="profile-avatar">
+              <i class="fas fa-user-circle"></i>
+            </div>
+            <div class="profile-info">
+              <h3 id="perfilNombre">Usuario</h3>
+              <p id="perfilEmail">email@ejemplo.com</p>
+              <div class="profile-stats">
+                <div class="stat-item">
+                  <span class="stat-number" id="perfilCompras">0</span>
+                  <span class="stat-label">Compras</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-number" id="perfilGastado">$0</span>
+                  <span class="stat-label">Gastado</span>
+                </div>
+              </div>
+              <button class="profile-btn profile-btn-logout" id="perfilLogoutBtn">
+                <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
+              </button>
+            </div>
+          </div>
+
+          <!-- Formulario de Login / Registro -->
+          <div id="perfilFormulario">
+            <div class="auth-tabs">
+              <button class="auth-tab active" data-tab="login">Iniciar Sesión</button>
+              <button class="auth-tab" data-tab="register">Registrarse</button>
+            </div>
+
+            <!-- Login -->
+            <form id="loginForm" class="auth-form">
+              <div class="form-group">
+                <label><i class="fas fa-envelope"></i> Email</label>
+                <input type="email" id="loginEmail" placeholder="tu@email.com" required class="profile-input" />
+              </div>
+              <div class="form-group">
+                <label><i class="fas fa-lock"></i> Contraseña</label>
+                <input type="password" id="loginPassword" placeholder="••••••••" required class="profile-input" />
+              </div>
+              <button type="submit" class="profile-btn">
+                <i class="fas fa-sign-in-alt"></i> Iniciar Sesión
+              </button>
+              <p class="auth-error" id="loginError"></p>
+            </form>
+
+            <!-- Registro -->
+            <form id="registerForm" class="auth-form" style="display: none;">
+              <div class="form-group">
+                <label><i class="fas fa-user"></i> Nombre Completo</label>
+                <input type="text" id="registerName" placeholder="Tu nombre" required class="profile-input" />
+              </div>
+              <div class="form-group">
+                <label><i class="fas fa-envelope"></i> Email</label>
+                <input type="email" id="registerEmail" placeholder="tu@email.com" required class="profile-input" />
+              </div>
+              <div class="form-group">
+                <label><i class="fas fa-lock"></i> Contraseña</label>
+                <input type="password" id="registerPassword" placeholder="Mínimo 6 caracteres" required class="profile-input" minlength="6" />
+              </div>
+              <div class="form-group">
+                <label><i class="fas fa-phone"></i> Teléfono (opcional)</label>
+                <input type="tel" id="registerPhone" placeholder="+569 1234 5678" class="profile-input" />
+              </div>
+              <button type="submit" class="profile-btn">
+                <i class="fas fa-user-plus"></i> Crear Cuenta
+              </button>
+              <p class="auth-error" id="registerError"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== MODAL HISTORIAL ===== -->
+    <div class="modal" id="historialModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2><i class="fas fa-clock-rotate-left"></i> Historial de Compras</h2>
+          <button class="modal-close" id="historialClose">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div id="historialContent">
+            <!-- Se llena con JS -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== MODAL NOTIFICACIÓN ===== -->
+    <div class="modal" id="notificacionModal">
+      <div class="modal-content modal-notificacion">
+        <div class="modal-header">
+          <h2 id="notificacionIcon"><i class="fas fa-check-circle"></i></h2>
+          <button class="modal-close" id="notificacionClose">&times;</button>
+        </div>
+        <div class="modal-body">
+          <h3 id="notificacionTitulo">¡Éxito!</h3>
+          <p id="notificacionMensaje">Operación completada</p>
+          <button class="profile-btn" id="notificacionBtn">Aceptar</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="contacto">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3 class="footer-heading">
+            <i class="fas fa-seedling"></i> Las Frutas de Vicente
+          </h3>
+          <p>
+            Comprometidos con llevar la fruta más fresca, dulce y cremosa
+            directamente desde el campo hasta la puerta de tu casa.
+          </p>
+          <div class="footer-badges">
+            <span><i class="fas fa-leaf"></i> 100% Natural</span>
+            <span><i class="fas fa-star"></i> Calidad Selección</span>
+            <span><i class="fas fa-trophy"></i> Premiado</span>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3 class="footer-heading">
+            <i class="fas fa-truck"></i> Despachos a Domicilio
+          </h3>
+          <ul class="footer-list">
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              <strong>Zonas:</strong> Melipilla y alrededores.
+            </li>
+            <li>
+              <i class="fas fa-calendar-day"></i>
+              <strong>Días:</strong> Lunes a Domingo
+            </li>
+            <li>
+              <i class="fas fa-clock"></i>
+              <strong>Horario:</strong> 24/7 hrs
+            </li>
+            <li>
+              <em>
+                <i class="fas fa-info-circle"></i>
+                Pedidos con anticipación para asegurar stock fresco del día.
+              </em>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3 class="footer-heading">
+            <i class="fas fa-credit-card"></i> Medios de Pago
+          </h3>
+          <p class="pago-text">
+            Aceptamos múltiples opciones para tu comodidad al momento de la
+            entrega:
+          </p>
+          <div class="pago-tags">
+            <span class="tag-pago"><i class="fas fa-money-bill"></i> Efectivo</span>
+            <span class="tag-pago"><i class="fas fa-university"></i> Transferencia</span>
+            <span class="tag-pago"><i class="fab fa-bitcoin"></i> Bitcoin / Lightning</span>
+            <span class="tag-pago"><i class="fas fa-credit-card"></i> Tarjetas</span>
+          </div>
+          <a
+            href="https://wa.me/56922289073?text=Hola%20Vicente,%20tengo%20una%20duda%20con%20el%20reparto"
+            target="_blank"
+            class="footer-link"
+          >
+            <i class="fab fa-whatsapp"></i> ¿Dudas con el reparto? Escríbenos
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          <i class="fas fa-copyright"></i> 2026 Las Frutas de Vicente. Todos los derechos reservados.
+        </p>
+        <p><small>Página web optimizada para pedidos directos.</small></p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JAVASCRIPT - SISTEMA COMPLETO -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // ============================================================
+        // 1. SISTEMA DE USUARIOS (LocalStorage)
+        // ============================================================
+        const USERS_KEY = 'frutas_usuarios';
+        const SESSION_KEY = 'frutas_sesion';
+
+        function getUsers() {
+          try {
+            return JSON.parse(localStorage.getItem(USERS_KEY)) || [];
+          } catch {
+            return [];
+          }
+        }
+
+        function saveUsers(users) {
+          localStorage.setItem(USERS_KEY, JSON.stringify(users));
+        }
+
+        function getSession() {
+          try {
+            return JSON.parse(localStorage.getItem(SESSION_KEY));
+          } catch {
+            return null;
+          }
+        }
+
+        function saveSession(user) {
+          localStorage.setItem(SESSION_KEY, JSON.stringify(user));
+        }
+
+        function clearSession() {
+          localStorage.removeItem(SESSION_KEY);
+        }
+
+        function getCurrentUser() {
+          const session = getSession();
+          if (!session) return null;
+          const users = getUsers();
+          return users.find(u => u.email === session.email) || null;
+        }
+
+        // ============================================================
+        // 2. REGISTRO DE USUARIO
+        // ============================================================
+        document.getElementById('registerForm').addEventListener('submit', function(e) {
+          e.preventDefault();
+          
+          const name = document.getElementById('registerName').value.trim();
+          const email = document.getElementById('registerEmail').value.trim();
+          const password = document.getElementById('registerPassword').value;
+          const phone = document.getElementById('registerPhone').value.trim();
+          
+          const errorEl = document.getElementById('registerError');
+          errorEl.textContent = '';
+
+          // Validaciones
+          if (!name || name.length < 2) {
+            errorEl.textContent = '❌ Ingresa un nombre válido';
+            return;
+          }
+
+          if (!email || !email.includes('@')) {
+            errorEl.textContent = '❌ Ingresa un email válido';
+            return;
+          }
+
+          if (!password || password.length < 6) {
+            errorEl.textContent = '❌ La contraseña debe tener al menos 6 caracteres';
+            return;
+          }
+
+          // Verificar si el email ya existe
+          const users = getUsers();
+          if (users.find(u => u.email === email)) {
+            errorEl.textContent = '❌ Este email ya está registrado';
+            return;
+          }
+
+          // Crear usuario
+          const newUser = {
+            id: Date.now().toString(),
+            name: name,
+            email: email,
+            password: password,
+            phone: phone || '',
+            createdAt: new Date().toISOString(),
+            compras: [],
+            totalGastado: 0
+          };
+
+          users.push(newUser);
+          saveUsers(users);
+          saveSession(newUser);
+
+          // Mostrar notificación
+          mostrarNotificacion(
+            '✅ ¡Registro exitoso!',
+            `Bienvenido ${name}, tu cuenta ha sido creada.`,
+            'success'
+          );
+
+          // Actualizar UI
+          actualizarUI();
+          cerrarModal('perfilModal');
+        });
+
+        // ============================================================
+        // 3. LOGIN DE USUARIO
+        // ============================================================
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+          e.preventDefault();
+          
+          const email = document.getElementById('loginEmail').value.trim();
+          const password = document.getElementById('loginPassword').value;
+          
+          const errorEl = document.getElementById('loginError');
+          errorEl.textContent = '';
+
+          if (!email || !password) {
+            errorEl.textContent = '❌ Ingresa email y contraseña';
+            return;
+          }
+
+          const users = getUsers();
+          const user = users.find(u => u.email === email && u.password === password);
+
+          if (!user) {
+            errorEl.textContent = '❌ Email o contraseña incorrectos';
+            return;
+          }
+
+          saveSession(user);
+
+          mostrarNotificacion(
+            '✅ ¡Bienvenido!',
+            `Hola ${user.name}, has iniciado sesión correctamente.`,
+            'success'
+          );
+
+          actualizarUI();
+          cerrarModal('perfilModal');
+        });
+
+        // ============================================================
+        // 4. CERRAR SESIÓN
+        // ============================================================
+        function logout() {
+          const user = getCurrentUser();
+          clearSession();
+          actualizarUI();
+          mostrarNotificacion(
+            '👋 Sesión cerrada',
+            `Hasta luego ${user ? user.name : ''}, te esperamos pronto.`,
+            'info'
+          );
+          cerrarModal('perfilModal');
+        }
+
+        document.getElementById('logoutBtn').addEventListener('click', function(e) {
+          e.preventDefault();
+          logout();
+        });
+
+        document.getElementById('perfilLogoutBtn').addEventListener('click', function() {
+          logout();
+        });
+
+        // ============================================================
+        // 5. COMPRAS - Guardar en historial
+        // ============================================================
+        function registrarCompra(producto, tipo, cantidad, total, mensaje) {
+          const user = getCurrentUser();
+          if (!user) {
+            mostrarNotificacion(
+              '⚠️ Inicia sesión',
+              'Debes iniciar sesión para guardar tu historial de compras.',
+              'warning'
+            );
+            // Abrir modal de perfil
+            abrirModal('perfilModal');
+            return false;
+          }
+
+          const compra = {
+            id: Date.now().toString(),
+            fecha: new Date().toISOString(),
+            producto: producto,
+            tipo: tipo,
+            cantidad: cantidad,
+            total: total,
+            mensaje: mensaje,
+            estado: 'pendiente'
+          };
+
+          // Actualizar usuario
+          const users = getUsers();
+          const userIndex = users.findIndex(u => u.email === user.email);
+          if (userIndex !== -1) {
+            users[userIndex].compras.push(compra);
+            users[userIndex].totalGastado = (users[userIndex].totalGastado || 0) + total;
+            saveUsers(users);
+            saveSession(users[userIndex]);
+            
+            mostrarNotificacion(
+              '✅ ¡Compra registrada!',
+              `Tu pedido de ${producto} ha sido registrado en tu historial.`,
+              'success'
+            );
+            return true;
+          }
+          return false;
+        }
+
+        // ============================================================
+        // 6. BOTONES DE COMPRA
+        // ============================================================
+        document.querySelectorAll('.btn-comprar').forEach(btn => {
+          btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const productoId = this.dataset.producto;
+            const nombreProducto = this.dataset.nombre;
+            
+            // Obtener valores seleccionados
+            const tipoSelect = document.getElementById(`tipo-${productoId}`);
+            const cantidadSelect = document.getElementById(`cantidad-${productoId}`);
+            const totalSpan = document.getElementById(`total-${productoId}`);
+            
+            if (!tipoSelect || !cantidadSelect || !totalSpan) return;
+            
+            const tipoTexto = tipoSelect.options[tipoSelect.selectedIndex].text;
+            const cantidad = parseInt(cantidadSelect.value);
+            const total = parseInt(totalSpan.textContent.replace(/[$,.]/g, ''));
+            
+            // Crear mensaje para WhatsApp
+            const mensaje = `Hola Vicente, quiero pedir ${cantidad} ${tipoTexto} de ${nombreProducto}`;
+            const whatsappUrl = `https://wa.me/56922289073?text=${encodeURIComponent(mensaje)}`;
+            
+            // Registrar compra en el historial
+            const registrado = registrarCompra(
+              nombreProducto,
+              tipoTexto,
+              cantidad,
+              total,
+              mensaje
+            );
+            
+            // Abrir WhatsApp
+            window.open(whatsappUrl, '_blank');
+            
+            // Feedback visual
+            this.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+              this.style.transform = 'scale(1)';
+            }, 200);
+          });
+        });
+
+        // ============================================================
+        // 7. MODALES
+        // ============================================================
+        function abrirModal(id) {
+          const modal = document.getElementById(id);
+          if (modal) {
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+          }
+        }
+
+        function cerrarModal(id) {
+          const modal = document.getElementById(id);
+          if (modal) {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+          }
+        }
+
+        // Perfil
+        document.getElementById('perfilBtn').addEventListener('click', function(e) {
+          e.preventDefault();
+          const user = getCurrentUser();
+          if (user) {
+            // Mostrar perfil logueado
+            document.getElementById('perfilLogueado').style.display = 'block';
+            document.getElementById('perfilFormulario').style.display = 'none';
+            document.getElementById('modalPerfilTitle').textContent = 'Mi Perfil';
+            
+            document.getElementById('perfilNombre').textContent = user.name;
+            document.getElementById('perfilEmail').textContent = user.email;
+            document.getElementById('perfilCompras').textContent = user.compras ? user.compras.length : 0;
+            document.getElementById('perfilGastado').textContent = `$${(user.totalGastado || 0).toLocaleString('es-CL')}`;
+          } else {
+            document.getElementById('perfilLogueado').style.display = 'none';
+            document.getElementById('perfilFormulario').style.display = 'block';
+            document.getElementById('modalPerfilTitle').textContent = 'Mi Cuenta';
+          }
+          abrirModal('perfilModal');
+        });
+
+        document.getElementById('perfilClose').addEventListener('click', function() {
+          cerrarModal('perfilModal');
+        });
+
+        // Historial
+        document.getElementById('historialBtn').addEventListener('click', function(e) {
+          e.preventDefault();
+          const user = getCurrentUser();
+          const content = document.getElementById('historialContent');
+          
+          if (!user) {
+            content.innerHTML = `
+              <div class="historial-empty">
+                <i class="fas fa-shopping-bag"></i>
+                <h3>Inicia sesión para ver tu historial</h3>
+                <p>Regístrate o inicia sesión para guardar y ver tus compras.</p>
+                <button class="historial-btn" id="historialGoToLogin">
+                  <i class="fas fa-user"></i> Ir a Mi Perfil
+                </button>
+              </div>
+            `;
+            document.getElementById('historialGoToLogin').addEventListener('click', function() {
+              cerrarModal('historialModal');
+              document.getElementById('perfilBtn').click();
+            });
+          } else if (!user.compras || user.compras.length === 0) {
+            content.innerHTML = `
+              <div class="historial-empty">
+                <i class="fas fa-shopping-bag"></i>
+                <h3>No hay compras registradas</h3>
+                <p>¡Realiza tu primer pedido para ver tu historial aquí!</p>
+                <a href="#productos" class="historial-btn">
+                  <i class="fas fa-shopping-cart"></i> Ir a Productos
+                </a>
+              </div>
+            `;
+          } else {
+            let html = `<div class="historial-items">`;
+            const comprasOrdenadas = [...user.compras].reverse();
+            comprasOrdenadas.forEach(compra => {
+              const fecha = new Date(compra.fecha);
+              const fechaStr = fecha.toLocaleDateString('es-CL');
+              const horaStr = fecha.toLocaleTimeString('es-CL', { hour: '2-digit', minute: '2-digit' });
+              const estadoClass = compra.estado === 'entregado' ? 'entregado' : 'pendiente';
+              const estadoText = compra.estado === 'entregado' ? '✅ Entregado' : '⏳ Pendiente';
+              
+              html += `
+                <div class="historial-item">
+                  <span class="historial-date">${fechaStr} ${horaStr}</span>
+                  <span class="historial-product">${compra.producto}</span>
+                  <span class="historial-price">$${compra.total.toLocaleString('es-CL')}</span>
+                  <span class="historial-status ${estadoClass}">${estadoText}</span>
+                </div>
+              `;
+            });
+            html += `</div>`;
+            
+            // Resumen
+            html += `
+              <div class="historial-resumen">
+                <div class="resumen-item">
+                  <span class="resumen-label">Total de compras:</span>
+                  <span class="resumen-value">${user.compras.length}</span>
+                </div>
+                <div class="resumen-item">
+                  <span class="resumen-label">Total gastado:</span>
+                  <span class="resumen-value">$${(user.totalGastado || 0).toLocaleString('es-CL')}</span>
+                </div>
+              </div>
+            `;
+            
+            content.innerHTML = html;
+          }
+          
+          abrirModal('historialModal');
+        });
+
+        document.getElementById('historialClose').addEventListener('click', function() {
+          cerrarModal('historialModal');
+        });
+
+        // Cerrar modales con click fuera
+        document.querySelectorAll('.modal').forEach(modal => {
+          modal.addEventListener('click', function(e) {
+            if (e.target === this) {
+              this.classList.remove('active');
+              document.body.style.overflow = '';
+            }
+          });
+        });
+
+        // Cerrar con Escape
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape') {
+            document.querySelectorAll('.modal.active').forEach(modal => {
+              modal.classList.remove('active');
+            });
+            document.body.style.overflow = '';
+          }
+        });
+
+        // ============================================================
+        // 8. NOTIFICACIONES
+        // ============================================================
+        function mostrarNotificacion(titulo, mensaje, tipo = 'success') {
+          const modal = document.getElementById('notificacionModal');
+          const icon = document.getElementById('notificacionIcon');
+          const tituloEl = document.getElementById('notificacionTitulo');
+          const mensajeEl = document.getElementById('notificacionMensaje');
+          const btn = document.getElementById('notificacionBtn');
+          
+          const iconos = {
+            success: '<i class="fas fa-check-circle" style="color: #4ade80;"></i>',
+            error: '<i class="fas fa-times-circle" style="color: #ef4444;"></i>',
+            warning: '<i class="fas fa-exclamation-triangle" style="color: #f59e0b;"></i>',
+            info: '<i class="fas fa-info-circle" style="color: #3b82f6;"></i>'
+          };
+          
+          icon.innerHTML = iconos[tipo] || iconos.success;
+          tituloEl.textContent = titulo;
+          mensajeEl.textContent = mensaje;
+          
+          btn.onclick = function() {
+            cerrarModal('notificacionModal');
+          };
+          
+          abrirModal('notificacionModal');
+          
+          // Auto cerrar después de 4 segundos
+          setTimeout(() => {
+            if (document.getElementById('notificacionModal').classList.contains('active')) {
+              cerrarModal('notificacionModal');
+            }
+          }, 4000);
+        }
+
+        document.getElementById('notificacionClose').addEventListener('click', function() {
+          cerrarModal('notificacionModal');
+        });
+
+        // ============================================================
+        // 9. PESTAÑAS DE AUTENTICACIÓN
+        // ============================================================
+        document.querySelectorAll('.auth-tab').forEach(tab => {
+          tab.addEventListener('click', function() {
+            // Remover active de todas
+            document.querySelectorAll('.auth-tab').forEach(t => t.classList.remove('active'));
+            this.classList.add('active');
+            
+            const tabName = this.dataset.tab;
+            if (tabName === 'login') {
+              document.getElementById('loginForm').style.display = 'block';
+              document.getElementById('registerForm').style.display = 'none';
+            } else {
+              document.getElementById('loginForm').style.display = 'none';
+              document.getElementById('registerForm').style.display = 'block';
+            }
+            
+            // Limpiar errores
+            document.getElementById('loginError').textContent = '';
+            document.getElementById('registerError').textContent = '';
+          });
+        });
+
+        // ============================================================
+        // ===== NAVBAR - MENÚ DESPLEGABLE =====
+const navToggle = document.getElementById('navToggle');
+const navDropdown = document.getElementById('navDropdown');
+
+navToggle.addEventListener('click', function(e) {
+  e.stopPropagation();
+  navDropdown.classList.toggle('active');
+  navToggle.classList.toggle('active');
+  
+  // Cambiar ícono
+  const icon = this.querySelector('i');
+  if (navDropdown.classList.contains('active')) {
+    icon.className = 'fas fa-times';
+  } else {
+    icon.className = 'fas fa-bars';
+  }
+});
+
+// Cerrar menú al hacer click fuera
+document.addEventListener('click', function(e) {
+  const navbar = document.getElementById('navbar');
+  if (!navbar.contains(e.target)) {
+    navDropdown.classList.remove('active');
+    navToggle.classList.remove('active');
+    const icon = navToggle.querySelector('i');
+    icon.className = 'fas fa-bars';
+  }
+});
+
+// Cerrar menú al hacer click en un enlace
+document.querySelectorAll('.nav-link, .nav-link-cta').forEach(link => {
+  link.addEventListener('click', function() {
+    navDropdown.classList.remove('active');
+    navToggle.classList.remove('active');
+    const icon = navToggle.querySelector('i');
+    icon.className = 'fas fa-bars';
+  });
+});
+
+// Navbar con sombra al hacer scroll
+window.addEventListener('scroll', function() {
+  const navbar = document.getElementById('navbar');
+  if (window.scrollY > 50) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+});
+
+        // ============================================================
+        // 11. BUSCADOR
+        // ============================================================
+        const searchInput = document.getElementById('searchInput');
+        const searchBtn = document.getElementById('searchBtn');
+
+        function filtrarProductos(query) {
+          const productos = document.querySelectorAll('.card');
+          const queryLower = query.toLowerCase().trim();
+          
+          productos.forEach(producto => {
+            const nombre = producto.dataset.nombre || '';
+            const categoria = producto.dataset.categoria || '';
+            const titulo = producto.querySelector('.card-title')?.textContent?.toLowerCase() || '';
+            
+            const coincide = nombre.includes(queryLower) || 
+                           categoria.includes(queryLower) || 
+                           titulo.includes(queryLower);
+            
+            if (query === '' || coincide) {
+              producto.style.display = '';
+              setTimeout(() => {
+                producto.style.opacity = '1';
+                producto.style.transform = 'translateY(0)';
+              }, 50);
+            } else {
+              producto.style.opacity = '0';
+              producto.style.transform = 'translateY(20px)';
+              setTimeout(() => {
+                producto.style.display = 'none';
+              }, 300);
+            }
+          });
+
+          const container = document.getElementById('productos');
+          let noResults = container.querySelector('.no-results');
+          
+          const visible = document.querySelectorAll('.card[style*="display: none"]');
+          const total = document.querySelectorAll('.card');
+          
+          if (visible.length === total.length && query !== '') {
+            if (!noResults) {
+              noResults = document.createElement('div');
+              noResults.className = 'no-results';
+              noResults.innerHTML = `
+                <i class="fas fa-search"></i>
+                <h3>No encontramos resultados</h3>
+                <p>Prueba con otra palabra o revisa nuestros productos</p>
+              `;
+              container.appendChild(noResults);
+            }
+          } else if (noResults) {
+            noResults.remove();
+          }
+        }
+
+        searchInput.addEventListener('input', function() {
+          filtrarProductos(this.value);
+        });
+
+        searchBtn.addEventListener('click', function() {
+          filtrarProductos(searchInput.value);
+        });
+
+        searchInput.addEventListener('keypress', function(e) {
+          if (e.key === 'Enter') {
+            filtrarProductos(this.value);
+          }
+        });
+
+        // ============================================================
+        // 12. CALCULADORA DE PRECIOS
+        // ============================================================
+        function actualizarPrecio(producto) {
+          const tipoSelect = document.getElementById(`tipo-${producto}`);
+          const cantidadSelect = document.getElementById(`cantidad-${producto}`);
+          const totalSpan = document.getElementById(`total-${producto}`);
+          const btnWhatsApp = document.getElementById(`btn-${producto}`);
+
+          if (!tipoSelect || !cantidadSelect || !totalSpan) return;
+
+          const selectedOption = tipoSelect.options[tipoSelect.selectedIndex];
+          const precioBase = parseInt(selectedOption.dataset.precio);
+          const cantidad = parseInt(cantidadSelect.value);
+          const total = precioBase * cantidad;
+
+          totalSpan.textContent = `$${total.toLocaleString('es-CL')}`;
+
+          const nombreProducto = {
+            'frutilla': 'Frutillas 🍓',
+            'cereza': 'Cerezas 🍒',
+            'palta': 'Paltas 🥑',
+            'naranja': 'Naranjas 🍊'
+          };
+
+          const tipoTexto = tipoSelect.options[tipoSelect.selectedIndex].text;
+          const mensaje = `Hola Vicente, quiero pedir ${cantidad} ${tipoTexto} de ${nombreProducto[producto] || producto}`;
+          btnWhatsApp.dataset.mensaje = mensaje;
+        }
+
+        const productos = ['frutilla', 'cereza', 'palta', 'naranja'];
+        productos.forEach(producto => {
+          const tipoSelect = document.getElementById(`tipo-${producto}`);
+          const cantidadSelect = document.getElementById(`cantidad-${producto}`);
+
+          if (tipoSelect) {
+            tipoSelect.addEventListener('change', () => actualizarPrecio(producto));
+          }
+          if (cantidadSelect) {
+            cantidadSelect.addEventListener('change', () => actualizarPrecio(producto));
+          }
+          actualizarPrecio(producto);
+        });
+
+        // ============================================================
+        // 13. ACTUALIZAR UI SEGÚN SESIÓN
+        // ============================================================
+        function actualizarUI() {
+          const user = getCurrentUser();
+          const greeting = document.getElementById('userGreeting');
+          const userNameDisplay = document.getElementById('userNameDisplay');
+          const perfilText = document.getElementById('perfilText');
+          const logoutItem = document.getElementById('logoutNavItem');
+          const perfilNavItem = document.getElementById('perfilNavItem');
+
+          if (user) {
+            greeting.style.display = 'flex';
+            userNameDisplay.textContent = user.name;
+            perfilText.textContent = 'Mi Perfil';
+            logoutItem.style.display = 'flex';
+            
+            // Cambiar el ícono del perfil en el navbar
+            const perfilLink = document.getElementById('perfilBtn');
+            perfilLink.innerHTML = `<i class="fas fa-user-circle"></i> Mi Perfil`;
+            
+            // Actualizar perfil si está abierto
+            if (document.getElementById('perfilModal').classList.contains('active')) {
+              document.getElementById('perfilLogueado').style.display = 'block';
+              document.getElementById('perfilFormulario').style.display = 'none';
+              document.getElementById('modalPerfilTitle').textContent = 'Mi Perfil';
+              document.getElementById('perfilNombre').textContent = user.name;
+              document.getElementById('perfilEmail').textContent = user.email;
+              document.getElementById('perfilCompras').textContent = user.compras ? user.compras.length : 0;
+              document.getElementById('perfilGastado').textContent = `$${(user.totalGastado || 0).toLocaleString('es-CL')}`;
+            }
+          } else {
+            greeting.style.display = 'none';
+            perfilText.textContent = 'Mi Cuenta';
+            logoutItem.style.display = 'none';
+            
+            const perfilLink = document.getElementById('perfilBtn');
+            perfilLink.innerHTML = `<i class="fas fa-user-circle"></i> Mi Cuenta`;
+            
+            if (document.getElementById('perfilModal').classList.contains('active')) {
+              document.getElementById('perfilLogueado').style.display = 'none';
+              document.getElementById('perfilFormulario').style.display = 'block';
+              document.getElementById('modalPerfilTitle').textContent = 'Mi Cuenta';
+            }
+          }
+        }
+
+        // ============================================================
+        // 14. INICIALIZAR
+        // ============================================================
+        actualizarUI();
+
+        console.log('🍓🥑 Las Frutas de Vicente - ¡Bienvenido!');
+        console.log('📱 Para pedidos: wa.me/56922289073');
+        console.log('👥 Usuarios registrados:', getUsers().length);
+      });
+    </script>
+  </body>
+</html>
+
